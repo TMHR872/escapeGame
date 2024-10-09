@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Mondai_2 : MonoBehaviour
+public class MondaiB1 : MonoBehaviour
 {
     public InputField inputField;
     public GameObject mondaiObject;
     //public GameObject seikaiObject;
     public GameObject arrowObject;
     public GameObject inventoryObject;
-    public GameObject game1Object;
-    public GameObject canopen_game1Object;
+    public int count;
     public float hideDelay = 2.0f; // îÒï\é¶Ç…Ç∑ÇÈÇ‹Ç≈ÇÃéûä‘ÅiïbÅj
     // Start is called before the first frame update
     void Start()
@@ -27,15 +26,14 @@ public class Mondai_2 : MonoBehaviour
 
     public void InputText()
     {
-        if (inputField.text == "B" || inputField.text == "b")
+        if (inputField.text == "A" || inputField.text == "a")
         {
             //seikaiObject.SetActive(true);
             mondaiObject.SetActive(false);
             arrowObject.SetActive(true);
             inventoryObject.SetActive(true);
-            game1Object.SetActive(true);
-            canopen_game1Object.SetActive(false);
             //seikaiObject.SetActive(false);
+            count++;
 
         }
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Mondai_1 : MonoBehaviour
+public class Mondai_L1 : MonoBehaviour
 {
     public InputField inputField;
     public GameObject mondaiObject;
