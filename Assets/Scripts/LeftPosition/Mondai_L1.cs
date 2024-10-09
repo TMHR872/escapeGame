@@ -7,13 +7,14 @@ public class Mondai_L1 : MonoBehaviour
 {
     public InputField inputField;
     public GameObject mondaiObject;
-    //public GameObject seikaiObject;
+    public GameObject seikaiObject;
+    public GameObject fuseikaiObject;
+    public GameObject cancelObject;
     public GameObject arrowObject;
     public GameObject inventoryObject;
     public GameObject game1Object;
     public GameObject canopen_game1Object;
     public GameObject messageObject;
-    public GameObject cancelObject;
     public float hideDelay = 2.0f; // 非表示にするまでの時間（秒）
     // Start is called before the first frame update
     void Start()
@@ -31,16 +32,19 @@ public class Mondai_L1 : MonoBehaviour
     {
         if (inputField.text == "フィッシングメール")
         {
-            //seikaiObject.SetActive(true);
+            cancelObject.SetActive(true);
             mondaiObject.SetActive(false);
             arrowObject.SetActive(true);
             inventoryObject.SetActive(true);
             game1Object.SetActive(false);
             canopen_game1Object.SetActive(true);
             messageObject.SetActive(true);
-            cancelObject.SetActive(true);
-            //seikaiObject.SetActive(false);
 
+        }
+        else
+        {
+            fuseikaiObject.SetActive(true);
+            cancelObject.SetActive(true);
         }
 
     }

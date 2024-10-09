@@ -3,14 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MondaiB1 : MonoBehaviour
+public class Mondai_B1 : MonoBehaviour
 {
     public InputField inputField;
     public GameObject mondaiObject;
-    //public GameObject seikaiObject;
+    public GameObject seikaiObject;
+    public GameObject fuseikaiObject;
+    public GameObject cancelObject;
     public GameObject arrowObject;
     public GameObject inventoryObject;
-    public int count;
+    public GameObject kamikoppuObject;
+    public GameObject canOpen_kamikoppuObject;
+    public GameObject hiObject;
+    public GameObject canOpen_hiObject;
     public float hideDelay = 2.0f; // ”ñ•\Ž¦‚É‚·‚é‚Ü‚Å‚ÌŽžŠÔi•bj
     // Start is called before the first frame update
     void Start()
@@ -28,14 +33,27 @@ public class MondaiB1 : MonoBehaviour
     {
         if (inputField.text == "A" || inputField.text == "a")
         {
-            //seikaiObject.SetActive(true);
+            seikaiObject.SetActive(true);
+            cancelObject.SetActive(true);
             mondaiObject.SetActive(false);
             arrowObject.SetActive(true);
             inventoryObject.SetActive(true);
-            //seikaiObject.SetActive(false);
-            count++;
+            kamikoppuObject.SetActive(true);
+            canOpen_kamikoppuObject.SetActive(false);
+            Mondai_B4.count++;
+            if (Mondai_B4.count >= 3)
+            {
+                hiObject.SetActive(false);
+                canOpen_hiObject.SetActive(true);
+            }
 
         }
+        else
+        {
+            fuseikaiObject.SetActive(true);
+            cancelObject.SetActive(true);
+        }
+
 
     }
 
