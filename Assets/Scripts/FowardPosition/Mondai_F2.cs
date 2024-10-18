@@ -14,11 +14,14 @@ public class Mondai_F2 : MonoBehaviour
     public GameObject inventoryObject;
     public GameObject clockObject;
     public GameObject canopen_clockObject;
+    public AudioClip correctSound;       // 正解音のAudioClip
+    private AudioSource audioSource;     // AudioSourceを格納する変数
     public float hideDelay = 2.0f; // 非表示にするまでの時間（秒）
     // Start is called before the first frame update
     void Start()
     {
         inputField = inputField.GetComponent<InputField>();
+        audioSource = gameObject.AddComponent<AudioSource>(); // AudioSourceを追加
     }
 
     // Update is called once per frame
@@ -31,6 +34,7 @@ public class Mondai_F2 : MonoBehaviour
     {
         if (inputField.text == "きみつ、かよう、かんぜん" || inputField.text == "きみつ,かよう,かんぜん")
         {
+            audioSource.PlayOneShot(correctSound); // 音声を再生
             seikaiObject.SetActive(true);
             cancelObject.SetActive(true);
             mondaiObject.SetActive(false);
