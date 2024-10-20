@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Mondai_F2 : MonoBehaviour
+public class Mondai_F3 : MonoBehaviour
 {
     public InputField inputField;
     public GameObject mondaiObject;
@@ -12,12 +12,12 @@ public class Mondai_F2 : MonoBehaviour
     public GameObject cancelObject;
     public GameObject arrowObject;
     public GameObject inventoryObject;
-    public GameObject deskObject;
-    public GameObject canOpen_deskObject;
+    public GameObject gomibakoObject;
+    public GameObject canOpen_gomibakoObject;
     public GameObject clockObject;
     public GameObject hintpanelObject;
     public GameObject canOpen_clockObject;
-    public GameObject hint2Object;
+    public GameObject hint3Object;
     public float hideDelay = 2.0f; // 非表示にするまでの時間（秒）
     // Start is called before the first frame update
     void Start()
@@ -33,17 +33,17 @@ public class Mondai_F2 : MonoBehaviour
 
     public void InputText()
     {
-        if (inputField.text == "か、よう" || inputField.text == "か,よう")
+        if (inputField.text == "かん、ぜん" || inputField.text == "かん、ぜん")
         {
             seikaiObject.SetActive(true);
             cancelObject.SetActive(true);
             mondaiObject.SetActive(false);
             arrowObject.SetActive(true);
             inventoryObject.SetActive(true);
-            deskObject.SetActive(true);
-            canOpen_deskObject.SetActive(false);
+            gomibakoObject.SetActive(true);
+            canOpen_gomibakoObject.SetActive(false);
             hintpanelObject.SetActive(true);
-            hint2Object.SetActive(true);
+            hint3Object.SetActive(true);
             Mondai_F4.cnt++;
             if (Mondai_F4.cnt >= 3)
             {

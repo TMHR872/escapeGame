@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Mondai_F2 : MonoBehaviour
+public class Mondai_F4 : MonoBehaviour
 {
     public InputField inputField;
     public GameObject mondaiObject;
@@ -12,17 +12,17 @@ public class Mondai_F2 : MonoBehaviour
     public GameObject cancelObject;
     public GameObject arrowObject;
     public GameObject inventoryObject;
-    public GameObject deskObject;
-    public GameObject canOpen_deskObject;
     public GameObject clockObject;
-    public GameObject hintpanelObject;
-    public GameObject canOpen_clockObject;
-    public GameObject hint2Object;
+    public GameObject canopen_clockObject;
+    public static int cnt = 0;
+    //public AudioClip correctSound;       // 正解音のAudioClip
+    //private AudioSource audioSource;     // AudioSourceを格納する変数
     public float hideDelay = 2.0f; // 非表示にするまでの時間（秒）
     // Start is called before the first frame update
     void Start()
     {
         inputField = inputField.GetComponent<InputField>();
+        //audioSource = gameObject.AddComponent<AudioSource>(); // AudioSourceを追加
     }
 
     // Update is called once per frame
@@ -33,29 +33,22 @@ public class Mondai_F2 : MonoBehaviour
 
     public void InputText()
     {
-        if (inputField.text == "か、よう" || inputField.text == "か,よう")
+        if (inputField.text == "きみつ、かよう、かんぜん" || inputField.text == "きみつ,かよう,かんぜん")
         {
+            //audioSource.PlayOneShot(correctSound); // 音声を再生
             seikaiObject.SetActive(true);
             cancelObject.SetActive(true);
             mondaiObject.SetActive(false);
             arrowObject.SetActive(true);
             inventoryObject.SetActive(true);
-            deskObject.SetActive(true);
-            canOpen_deskObject.SetActive(false);
-            hintpanelObject.SetActive(true);
-            hint2Object.SetActive(true);
-            Mondai_F4.cnt++;
-            if (Mondai_F4.cnt >= 3)
-            {
-                clockObject.SetActive(false);
-                canOpen_clockObject.SetActive(true);
-            }
+            clockObject.SetActive(true);
+            canopen_clockObject.SetActive(false);
 
         }
         else
         {
             fuseikaiObject.SetActive(true);
-            cancelObject?.SetActive(true);
+            cancelObject.SetActive(true);
         }
 
     }
