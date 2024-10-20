@@ -12,7 +12,7 @@ public class Mondai_L2 : MonoBehaviour
     public GameObject cancelObject;
     public GameObject arrowObject;
     public GameObject inventoryObject;
-    public GameObject game1Object;
+    public GameObject hintgame1Object;
     public GameObject canopen_game1Object;
     public float hideDelay = 2.0f; // îÒï\é¶Ç…Ç∑ÇÈÇ‹Ç≈ÇÃéûä‘ÅiïbÅj
     // Start is called before the first frame update
@@ -36,7 +36,7 @@ public class Mondai_L2 : MonoBehaviour
             mondaiObject.SetActive(false);
             arrowObject.SetActive(true);
             inventoryObject.SetActive(true);
-            game1Object.SetActive(true);
+            hintgame1Object.SetActive(true);
             canopen_game1Object.SetActive(false);
 
         }
