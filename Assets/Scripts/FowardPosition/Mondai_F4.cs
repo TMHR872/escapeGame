@@ -14,6 +14,8 @@ public class Mondai_F4 : MonoBehaviour
     public GameObject inventoryObject;
     public GameObject clockObject;
     public GameObject canopen_clockObject;
+    public GameObject closedoorObject;
+    public GameObject opendoorObject;
     public static int cnt = 0;
     //public AudioClip correctSound;       // ê≥ââπÇÃAudioClip
     //private AudioSource audioSource;     // AudioSourceÇäiî[Ç∑ÇÈïœêî
@@ -43,6 +45,8 @@ public class Mondai_F4 : MonoBehaviour
             inventoryObject.SetActive(true);
             clockObject.SetActive(true);
             canopen_clockObject.SetActive(false);
+            closedoorObject.SetActive(false);
+            opendoorObject.SetActive(true);
 
         }
         else

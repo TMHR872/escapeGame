@@ -15,7 +15,7 @@ public class Mondai_F1 : MonoBehaviour
     public GameObject calenderObject;
     public GameObject canOpen_calenderObject;
     public GameObject clockObject;
-    public GameObject hintpanelObject;
+    //public GameObject hintpanelObject;
     public GameObject canOpen_clockObject;
     public GameObject hint1Object;
     public float hideDelay = 2.0f; // ”ñ•\Ž¦‚É‚·‚é‚Ü‚Å‚ÌŽžŠÔi•bj
@@ -42,7 +42,7 @@ public class Mondai_F1 : MonoBehaviour
             inventoryObject.SetActive(true);
             calenderObject.SetActive(true);
             canOpen_calenderObject.SetActive(false);
-            hintpanelObject.SetActive(true);
+            //hintpanelObject.SetActive(true);
             hint1Object.SetActive(true);
             Mondai_F4.cnt++;
             if (Mondai_F4.cnt >= 3)

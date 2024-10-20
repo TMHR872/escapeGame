@@ -15,7 +15,7 @@ public class Mondai_F3 : MonoBehaviour
     public GameObject gomibakoObject;
     public GameObject canOpen_gomibakoObject;
     public GameObject clockObject;
-    public GameObject hintpanelObject;
+    //public GameObject hintpanelObject;
     public GameObject canOpen_clockObject;
     public GameObject hint3Object;
     public float hideDelay = 2.0f; // ”ñ•\Ž¦‚É‚·‚é‚Ü‚Å‚ÌŽžŠÔi•bj
@@ -42,7 +42,7 @@ public class Mondai_F3 : MonoBehaviour
             inventoryObject.SetActive(true);
             gomibakoObject.SetActive(true);
             canOpen_gomibakoObject.SetActive(false);
-            hintpanelObject.SetActive(true);
+            //hintpanelObject.SetActive(true);
             hint3Object.SetActive(true);
             Mondai_F4.cnt++;
             if (Mondai_F4.cnt >= 3)
