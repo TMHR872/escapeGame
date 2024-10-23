@@ -29,7 +29,7 @@ public class Mondai_L2 : MonoBehaviour
 
     public void InputText()
     {
-        if (inputField.text == "B" || inputField.text == "b")
+        if (inputField.text == "B" || inputField.text == "b" || inputField.text == "‚a" || inputField.text == "‚‚")
         {
             seikaiObject.SetActive(true);
             cancelObject.SetActive(true);

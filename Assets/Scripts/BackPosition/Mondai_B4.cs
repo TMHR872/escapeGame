@@ -12,8 +12,8 @@ public class Mondai_B4 : MonoBehaviour
     public GameObject cancelObject;
     public GameObject arrowObject;
     public GameObject inventoryObject;
-    public GameObject hiObject;
-    public GameObject canOpen_hiObject;
+    public GameObject hintkinkoObject;
+    public GameObject canOpen_kinkoObject;
     public static int count = 0;
     public float hideDelay = 2.0f; // îÒï\é¶Ç…Ç∑ÇÈÇ‹Ç≈ÇÃéûä‘ÅiïbÅj
     // Start is called before the first frame update
@@ -30,15 +30,15 @@ public class Mondai_B4 : MonoBehaviour
 
     public void InputText()
     {
-        if (inputField.text == "CAT" || inputField.text == "cat")
+        if (inputField.text == "CAT" || inputField.text == "cat" || inputField.text == "ÇbÇ`Çs")
         {
             seikaiObject.SetActive(true);
             cancelObject.SetActive(true);
             mondaiObject.SetActive(false);
             arrowObject.SetActive(true);
             inventoryObject.SetActive(true);
-            hiObject.SetActive(true);
-            canOpen_hiObject.gameObject.SetActive(false);
+            hintkinkoObject.SetActive(true);
+            canOpen_kinkoObject.gameObject.SetActive(false);
 
         }
         else

@@ -14,8 +14,8 @@ public class Mondai_B1 : MonoBehaviour
     public GameObject inventoryObject;
     public GameObject kamikoppuObject;
     public GameObject canOpen_kamikoppuObject;
-    public GameObject hiObject;
-    public GameObject canOpen_hiObject;
+    public GameObject kinkoObject;
+    public GameObject canOpen_kinkoObject;
     public float hideDelay = 2.0f; // ”ñ•\Ž¦‚É‚·‚é‚Ü‚Å‚ÌŽžŠÔi•bj
     // Start is called before the first frame update
     void Start()
@@ -31,7 +31,7 @@ public class Mondai_B1 : MonoBehaviour
 
     public void InputText()
     {
-        if (inputField.text == "A" || inputField.text == "a")
+        if (inputField.text == "A" || inputField.text == "a" || inputField.text == "A")
         {
             seikaiObject.SetActive(true);
             cancelObject.SetActive(true);
@@ -43,8 +43,8 @@ public class Mondai_B1 : MonoBehaviour
             Mondai_B4.count++;
             if (Mondai_B4.count >= 3)
             {
-                hiObject.SetActive(false);
-                canOpen_hiObject.SetActive(true);
+                kinkoObject.SetActive(false);
+                canOpen_kinkoObject.SetActive(true);
             }
 
         }
