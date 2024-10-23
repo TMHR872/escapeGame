@@ -29,7 +29,7 @@ public class Mondai_R1 : MonoBehaviour
 
     public void InputText()
     {
-        if (inputField.text == "3")
+        if (inputField.text == "3" || inputField.text == "‚R")
         {
             cancelObject.SetActive(true);
             mondaiObject.SetActive(false);
